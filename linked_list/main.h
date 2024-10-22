@@ -4,17 +4,25 @@
 /* Singly Linked Lists */
 
 /**
- * struct slinked_l - A type for linked list data structure.
- * @data: the data.
- * @ptr: pointer to the next node in the list.
- * Description:
- * This is an implementation for the 
+ * TODO: make gpt to document this file.
  */
-typedef struct slinked_l
+
+typedef struct listElmt_
 {
-	int data;
-	struct slinked_l *ptr;
-}
+	void			*data;
+	struct listElmt_	*next;
+} listElmt_;
+
+typedef listElmt_* list_t;
+
+/* simple function for the singly linke list */
+
+list_t create_listElmt_(int data);
+void print_listElmt_(list_t list);
+void add_after_listElmt_(list_t list, int position, int data);
+void remove_listElmt_(list_t list, int position);
+void clear_listElmt_(list_t list);
+
 
 
 #endif /* LINKED_LIST_H */
